@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Selection</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="header">
+        <h1>Our Coffee Selection</h1>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="coffee.html">Coffee</a></li>
+                <li><a href="cart.html">Cart</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="coffee-list">
+            <article>
+                <img src="images/coffee1.jpg" alt="Blend 1" class="responsive-img">
+                <h3>Blend 1</h3>
+                <p>Rich and smooth with notes of chocolate - $15.99</p>
+                <button onclick="addToCart({ name: 'Blend 1', price: 15.99 })">Add to Cart</button>
+            </article>
+
+            <article>
+                <img src="images/coffee2.jpg" alt="Blend 2" class="responsive-img">
+                <h3>Blend 2</h3>
+                <p>Fruity and vibrant with a citrus aroma - $18.99</p>
+                <button onclick="addToCart({ name: 'Blend 2', price: 18.99 })">Add to Cart</button>
+            </article>
+        </section>
+    </main>
+    <script src="./js/app.js"></script>
+</body>
+</html>
