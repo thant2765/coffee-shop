@@ -224,12 +224,14 @@ body {
 
 .hero {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  padding: 2rem 0;
+  padding: 2rem;
+  gap: 20px;
 }
 
 .content {
-  flex: 1;
+  min-width: 300px;
 }
 
 .content h2 {
@@ -289,7 +291,7 @@ body {
 }
 
 .images {
-  flex: 1;
+  min-width: 350px;
   text-align: center;
 }
 
@@ -524,6 +526,39 @@ body {
   transition: 0.3s ease-out;
   background: #fff;
   padding: 10px;
+  height: 100vh;
+}
+
+.cart-panel-back {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: red;
+  z-index: -1;
+}
+
+.cart-items #btn-close-panel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 0;
+  outline: none;
+  background: transparent;
+  font-weight: bolder;
+  cursor: pointer;
+  transition: 0.3s ease;
+  margin: 5px;
+  float: right;
+
+  &:hover {
+    background: var(--espresso-brown);
+    color: #fff;
+  }
 }
 
 #registration {
