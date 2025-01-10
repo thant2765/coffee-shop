@@ -9,31 +9,42 @@ btn.innerHTML = `
 document.body.appendChild(btn)
 
 // cart panel
-const panel = document.createElement("section")
+const panel = document.createElement("div")
 panel.classList.add("cart-items")
 panel.innerHTML = `
-
-<section class="cart-items">
+    <button id="btn-close-panel" onclick="closePanel()">x</button>
+    
     <h2>Items in your cart:</h2>
+    
+
     <div id="cart-items">
-                <!-- Items will be dynamically added here -->
-            </div>
-            <p id="total">Total: $0.00</p>
-            <button onclick="clearCart()">Clear</button>
-            <button onclick="checkout()">Checkout</button>
-        </section>`
+        
+    </div>
+    <div id="total">Total: $<span id="total-price">0.00</span></div>
+    <button onclick="clearCart()">Clear</button>
+    <button onclick="checkout()">Checkout</button>`
 document.body.appendChild(panel)
+
+const panelBack = document.createElement("div")
+panelBack.classList.add("cart-panel-back")
+document.body.appendChild(panelBack)
+panelBack.addEventListener("click", closePanel)
 
 let collapsed = true
 
 btn.addEventListener("click", () => {
   if (collapsed) {
-    panel.style.right = "400px"
-  } else {
     panel.style.right = "0"
+  } else {
+    panel.style.right = "-100%"
   }
   collapsed = !collapsed
 })
+
+function closePanel() {
+  document.querySelector(".cart-items").style.right = "-100%"
+  collapsed = false
+}
 
 // Shopping
 
@@ -71,7 +82,7 @@ function updateCartDisplay() {
   const cart = getCart()
   console.log(cart)
   const cartList = document.getElementById("cart-items")
-  const totalDisplay = document.getElementById("total")
+  const totalDisplay = document.getElementById("total-price")
   console.log(cartList)
 
   let total = 0
@@ -89,7 +100,7 @@ function updateCartDisplay() {
     })
   }
 
-  totalDisplay.textContent = `Total: $${total.toFixed(2)}`
+  totalDisplay.textContent = `${total.toFixed(2)}`
 }
 
 // Simulate Payment
