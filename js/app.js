@@ -3,7 +3,7 @@
 const btn = document.createElement("button")
 btn.classList.add("cart-btn")
 btn.innerHTML = `
-    <img src="/images/icons/cart.png" alt="icon" />
+    <img src="images/icons/cart.png" alt="icon" />
 `
 
 document.body.appendChild(btn)

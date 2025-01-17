@@ -8,20 +8,22 @@
 </head>
 <body>
     <header class="header">
-        <h1>Our Coffee Selection</h1>
-        <nav>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="coffee.html">Coffee</a></li>
-                <li><a href="cart.html">Cart</a></li>
-            </ul>
-        </nav>
+        <div class="container">
+            <nav class="navbar">
+              <h1 class="logo">Kafice</h1>
+              <div class="nav">
+                <a href="#about">About Us</a>
+                <a href="index.html">Home</a>
+                <a href="cart.html">Cart</a>
+              </div>
+            </nav>
+          </div>
     </header>
 
     <main>
         <section class="coffee-list">
             <article>
-                <img src="images/coffee1.jpg" alt="Blend 1" class="responsive-img">
+                <img src="images/The Boutique Shot.jpg" alt="Blend 1" class="responsive-img">
                 <h3>Blend 1</h3>
                 <p>Rich and smooth with notes of chocolate - $15.99</p>
                 <button onclick="addToCart({ name: 'Blend 1', price: 15.99 })">Add to Cart</button>
