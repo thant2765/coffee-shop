@@ -14,15 +14,15 @@ panel.classList.add("cart-items")
 panel.innerHTML = `
     <button id="btn-close-panel" onclick="closePanel()">x</button>
     
-    <h2>Items in your cart:</h2>
+    <h2>Cart:</h2>
     
 
-    <div id="cart-items">
+    <ul id="cart-items">
         
-    </div>
+    </ul>
     <div id="total">Total: $<span id="total-price">0.00</span></div>
-    <button onclick="clearCart()">Clear</button>
-    <button onclick="checkout()">Checkout</button>`
+    <button class="btn primary-btn" onclick="clearCart()">Clear</button>
+    <button class="btn primary-btn" onclick="checkout()">Checkout</button>`
 document.body.appendChild(panel)
 
 const panelBack = document.createElement("div")
@@ -80,10 +80,8 @@ function updateCart(cart) {
 // Update Cart Display
 function updateCartDisplay() {
   const cart = getCart()
-  console.log(cart)
   const cartList = document.getElementById("cart-items")
   const totalDisplay = document.getElementById("total-price")
-  console.log(cartList)
 
   let total = 0
   if (cart.length == 0) {

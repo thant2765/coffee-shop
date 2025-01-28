@@ -1,44 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Registration</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
-   <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" rel="stylesheet">
-</head>
-<body>
-    
-<div class="wrapper">
-    <div class="card-switch">
-        <label class="switch">
-           <input type="checkbox" class="toggle">
-           <span class="slider"></span>
-           <span class="card-side"></span>
-           <div class="flip-card__inner">
-              <div class="flip-card__front">
-                 <div class="title">Log in</div>
-                 <form class="flip-card__form" action="">
-                    <input class="flip-card__input" name="email" placeholder="Email" type="email">
-                    <input class="flip-card__input" name="password" placeholder="Password" type="password">
-                    <button class="flip-card__btn">Let`s go!</button>
-                 </form>
-              </div>
-              <div class="flip-card__back">
-                 <div class="title">Sign up</div>
-                 <form class="flip-card__form" action="">
-                    <input class="flip-card__input" placeholder="Name" type="name">
-                    <input class="flip-card__input" name="email" placeholder="Email" type="email">
-                    <input class="flip-card__input" name="password" placeholder="Password" type="password">
-                    <button class="flip-card__btn">Confirm!</button>
-                 </form>
-              </div>
-           </div>
-        </label>
-    </div>   
-</div>
-</body>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="header grad-bg">
+      <div class="container">
+        <nav class="navbar">
+          <h1 class="logo"><a href="index.html">Bean Boutique</a></h1>
+          <ul class="nav">
+            <li class="dropdown">
+              <a href="#">Menu</a>
+              <ul class="dropdown-content">
+                <li><a href="coffee.html">Coffee</a></li>
+                <li><a href="equipments.html">Equipments</a></li>
+              </ul>
+            </li>
+            <li><a href="about.html">About</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <div class="wrapper">
+        <div class="switch">
+          <input type="checkbox" class="toggle" id="auth-toggle" />
+          <label class="slider" for="auth-toggle"></label>
+          <div class="card-side"></div>
+
+          <div class="flip-card__inner">
+            <!-- Login Form -->
+            <div class="flip-card__front">
+              <form class="flip-card__form" id="loginForm">
+                <h2 class="title">Login</h2>
+                <input
+                  class="input flip-card__input"
+                  name="email"
+                  placeholder="Email"
+                  type="email"
+                  required
+                />
+                <input
+                  class="input flip-card__input"
+                  name="password"
+                  placeholder="Password"
+                  type="password"
+                  required
+                />
+                <button class="btn primary-btn flip-card__btn" type="submit">
+                  Login
+                </button>
+              </form>
+            </div>
+
+            <!-- Signup Form -->
+            <div class="flip-card__back">
+              <form class="flip-card__form" id="signupForm">
+                <h2 class="title">Sign Up</h2>
+                <input
+                  class="input flip-card__input"
+                  name="email"
+                  placeholder="Email"
+                  type="email"
+                  required
+                />
+                <input
+                  class="input flip-card__input"
+                  name="password"
+                  placeholder="Password"
+                  type="password"
+                  required
+                />
+                <button class="btn primary-btn flip-card__btn" type="submit">
+                  Sign Up
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="js/script.js"></script>
+  </body>
 </html>
