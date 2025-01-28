@@ -1,0 +1,58 @@
+.menu-header {
+  display: flex;
+  justify-content: end;
+  gap: 0.5rem;
+  padding: 0.5rem;
+}
+
+.coffee-list {
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.coffee-list article {
+  display: flex;
+  width: 350px;
+  flex-direction: column;
+  border-radius: 16px;
+  transition: 0.3s ease-in-out;
+  background: #fffa;
+}
+
+.coffee-list article:hover {
+  background: white;
+}
+
+.coffee-list article img {
+  width: 200px;
+  border-radius: 16px;
+  align-self: center;
+  margin: 1rem 0 0 0;
+}
+
+.coffee-list article div {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.coffee-list article div h3 {
+  margin: 0;
+}
+
+.coffee-list article div span {
+  background: var(--espresso-brown);
+  width: fit-content;
+  color: white;
+  border-radius: 16px;
+  font-size: 12px;
+  margin-top: 1rem;
+  padding: 0.2rem 0.5rem;
+}
+
+.coffee-list article div button {
+  align-self: center;
+}
